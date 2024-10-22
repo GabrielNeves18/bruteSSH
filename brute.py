@@ -25,7 +25,7 @@ def bruteForce(alvo):
 	conexaoSsh.set_missing_host_key_policy(paramiko.AutoAddPolicy()) # cria uma politica de segurança para o ssh
 
 	'''Realiza o ataque de brute force '''
-	with open('password.txt') as filePassword:
+	with open(listaPassword) as filePassword:
 		for senha in filePassword:
 			senha = senha.strip()
 			try :
